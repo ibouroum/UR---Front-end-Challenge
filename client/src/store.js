@@ -13,7 +13,6 @@ const configureStore = (initialState) => {
     const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
     const Store = createStore(
         rootReducer(history),
-        initialState,
         composeEnhancers(applyMiddleware(routerMiddleware(history), sagaMiddleware))
     );
     sagaMiddleware.run(rootSaga);

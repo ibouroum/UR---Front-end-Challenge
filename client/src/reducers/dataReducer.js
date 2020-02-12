@@ -10,9 +10,9 @@ export default function (state = DEFAULT_STATE, action) {
         case getData :
            return {status: 'loading', isData: false, Data : null};
         case getDataSuccess :
-            return {status: 'success', isData: true, Data : action.Data};
+            return {status: action.status, isData: true, Data : action.Data};
          case getDataError :
-            return {status: 'error', isData: false, error : action.error};
+            return {status: action.status, isData: false, error : action.error};
         default:
             return state;
     }
