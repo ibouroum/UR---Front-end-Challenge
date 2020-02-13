@@ -3,6 +3,6 @@ import { connectRouter } from "connected-react-router";
 import dataReducer from './dataReducer'
 const combinedReducers = (history) =>combineReducers({
     "router" : connectRouter(history),
-    "Data" : dataReducer
+    "data" : dataReducer
 });
 export default combinedReducers;

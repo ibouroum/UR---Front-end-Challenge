@@ -1,13 +1,14 @@
 import React from 'react';
 import Routes from './routes';
-// import Navbar from './commun/navbar';
+import Navbar from './commun/navbar';
+
 import Footer from './commun/footer'; 
 const App= ()=> {
   return (
     <div className="App">
-      {/* <Navbar/> */}
+      <Navbar/>
       <Routes/>
-      {/* <Footer/> */} 
+      <Footer/> 
     </div>
   );
 }
